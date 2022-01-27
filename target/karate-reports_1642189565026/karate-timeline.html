@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"pool-1-thread-2","id":1},{"content":"pool-1-thread-4","id":2},{"content":"pool-1-thread-1","id":3},{"content":"pool-1-thread-5","id":4},{"content":"pool-1-thread-3","id":5}];
+var items = [{"id":1,"group":1,"content":"com\/api\/automation\/getrequest\/validateXMLResponse[1:10]","start":1642189429693,"end":1642189429929,"title":"com\/api\/automation\/getrequest\/validateXMLResponse[1:10] 01:13:49.693-01:13:49.929 To get all the data from application in XML format using path variable","className":"failed"},{"id":2,"group":2,"content":"com\/api\/automation\/getrequest\/validateXMLResponse[2:22]","start":1642189429715,"end":1642189429952,"title":"com\/api\/automation\/getrequest\/validateXMLResponse[2:22] 01:13:49.715-01:13:49.952 To get all the data from application in XML format and validate using Fuzzy Matcher","className":"failed"},{"id":3,"group":3,"content":"com\/api\/automation\/getrequest\/getRequest[1:8]","start":1642189428860,"end":1642189429583,"title":"com\/api\/automation\/getrequest\/getRequest[1:8] 01:13:48.860-01:13:49.583 To get all the data from application in JSON format using path variable"},{"id":4,"group":1,"content":"com\/api\/automation\/getrequest\/getRequest[2:14]","start":1642189428860,"end":1642189429688,"title":"com\/api\/automation\/getrequest\/getRequest[2:14] 01:13:48.860-01:13:49.688 To get all the data from application in XML format using path variable"},{"id":5,"group":4,"content":"com\/api\/automation\/getrequest\/Variables[1:7]","start":1642189429750,"end":1642189429802,"title":"com\/api\/automation\/getrequest\/Variables[1:7] 01:13:49.750-01:13:49.802 To create a variable"},{"id":6,"group":3,"content":"com\/api\/automation\/getrequest\/Variables[2:16]","start":1642189429796,"end":1642189429802,"title":"com\/api\/automation\/getrequest\/Variables[2:16] 01:13:49.796-01:13:49.802 Access the variables"},{"id":7,"group":4,"content":"com\/api\/automation\/getrequest\/jsonPathExpression[1:6]","start":1642189428860,"end":1642189429742,"title":"com\/api\/automation\/getrequest\/jsonPathExpression[1:6] 01:13:48.860-01:13:49.742 To get the value of property using json path expression"},{"id":8,"group":3,"content":"com\/api\/automation\/getrequest\/validateJSONArray[1:10]","start":1642189429637,"end":1642189429716,"title":"com\/api\/automation\/getrequest\/validateJSONArray[1:10] 01:13:49.637-01:13:49.716 To get all the data from application in JSON format using path variable"},{"id":9,"group":2,"content":"com\/api\/automation\/getrequest\/validateJSONArray[2:26]","start":1642189429636,"end":1642189429710,"title":"com\/api\/automation\/getrequest\/validateJSONArray[2:26] 01:13:49.636-01:13:49.710 To get all the data from application in JSON format and validate using Fuzzy Matcher"},{"id":10,"group":5,"content":"com\/api\/automation\/getrequest\/getRequest2[1:4]","start":1642189428860,"end":1642189429089,"title":"com\/api\/automation\/getrequest\/getRequest2[1:4] 01:13:48.860-01:13:49.089 To test the get end point with JSON data","className":"failed"},{"id":11,"group":2,"content":"com\/api\/automation\/getrequest\/getRequest2[2:11]","start":1642189428860,"end":1642189429089,"title":"com\/api\/automation\/getrequest\/getRequest2[2:11] 01:13:48.860-01:13:49.089 To test the get end point with xml data","className":"failed"},{"id":12,"group":2,"content":"com\/api\/automation\/getrequest\/responseMatcher[1:11]","start":1642189429099,"end":1642189429628,"title":"com\/api\/automation\/getrequest\/responseMatcher[1:11] 01:13:49.099-01:13:49.628 To get all the data from application in JSON format using path variable","className":"failed"},{"id":13,"group":5,"content":"com\/api\/automation\/getrequest\/responseMatcher[2:43]","start":1642189429116,"end":1642189429880,"title":"com\/api\/automation\/getrequest\/responseMatcher[2:43] 01:13:49.116-01:13:49.880 To get all the data from application in XML format using path variable"},{"id":14,"group":3,"content":"com\/api\/automation\/getrequest\/responseMatcher[3:52]","start":1642189429590,"end":1642189429628,"title":"com\/api\/automation\/getrequest\/responseMatcher[3:52] 01:13:49.590-01:13:49.628 To get all the data from application in JSON format and validate a specific property"},{"id":15,"group":3,"content":"com\/api\/automation\/getrequest\/ValidationUsingFile[1:11]","start":1642189429736,"end":1642189429787,"title":"com\/api\/automation\/getrequest\/ValidationUsingFile[1:11] 01:13:49.736-01:13:49.787 To get all the data from application in JSON format and validate from file","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

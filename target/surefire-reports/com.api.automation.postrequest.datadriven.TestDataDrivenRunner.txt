@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+Test set: com.api.automation.postrequest.datadriven.TestDataDrivenRunner
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.218 s <<< FAILURE! - in com.api.automation.postrequest.datadriven.TestDataDrivenRunner
+runTest[1][4]  Time elapsed: 0.021 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+no step-definition method match found for: status <status>
+classpath:com/api/automation/postrequest/datadriven/postDataDriven.feature:28
+
+runTest[1][5]  Time elapsed: 0.018 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+no step-definition method match found for: status <status>
+classpath:com/api/automation/postrequest/datadriven/postDataDriven.feature:28
+
+runTest[1][6]  Time elapsed: 0.118 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+no step-definition method match found for: status <status>
+classpath:com/api/automation/postrequest/datadriven/postDataDriven.feature:28
+

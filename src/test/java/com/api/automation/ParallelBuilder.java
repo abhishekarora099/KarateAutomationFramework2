@@ -12,7 +12,7 @@ public class ParallelBuilder {
 	public void executeKarateTest() {
 		
 		Builder aRunner = new Builder();
-		aRunner.path("classpath:com/api/automation");
+		aRunner.path("classpath:com/api/automation/postrequest/fileUpload");
 		//aRunner.tags("@smoke");
 		Results result=aRunner.parallel(5);
 		System.out.println("Total Feature==>" +result.getFeaturesTotal());
